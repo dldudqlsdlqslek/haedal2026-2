@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -36,8 +37,8 @@ public class User {
     private String imageUrl;
 
 
-    //    @OneToMany(mappedBy = "user")
-//    private List<Post> posts;
+    @OneToMany(mappedBy = "user")
+    private List<Post> posts;
 //
 //    @OneToMany(mappedBy = "user")
 //    private List<Like> likes;
